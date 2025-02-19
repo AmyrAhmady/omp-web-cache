@@ -8,8 +8,8 @@ runs:
     - uses: actions/cache@v4
       with:
         path: |
-          ${{ github.workspace }}/.docusaurus
-          ${{ github.workspace }}/**/.cache
+          ${{ github.workspace }}/frontend/.docusaurus
+          ${{ github.workspace }}/frontend/**/.cache
         key: |
           ${{ runner.os }}-docusaurus-${{ hashFiles('**/package-lock.json', '**/npm-shrinkwrap.json', '**/yarn.lock', '**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
         restore-keys: |
